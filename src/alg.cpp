@@ -2,7 +2,6 @@
 #include <cstdint>
 #include "alg.h"
 
-
 double pown(double value, uint16_t n) {
     if (n == 0)
         return 1;
@@ -11,17 +10,14 @@ double pown(double value, uint16_t n) {
         value *= valueSave;
     }
     return value;
-
 }
 
 uint64_t fact(uint16_t n) {
     if (n <= 1) {
         return 1;
     }
-    else {
+    else
         return n * fact(n - 1);
-    }
-
 }
 
 double calcItem(double x, uint16_t n) {
@@ -50,5 +46,4 @@ double cosn(double x, uint16_t count) {
         new_x += pown(-1, i - 1) * calcItem(x, (2 * i) - 2);
     }
     return new_x;
-
 }
